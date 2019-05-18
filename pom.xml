@@ -2,12 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ly.train</groupId>
-    <artifactId>postgresql-async</artifactId>
+    <artifactId>postgresql-async-parent</artifactId>
     <version>0.2.22-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>db-async-common</module>
         <module>mysql-async</module>
+        <module>postgresql-async</module>
     </modules>
     <properties>
         <scala.version>2.12.8</scala.version>
