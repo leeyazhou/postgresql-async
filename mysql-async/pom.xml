@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ly.train</groupId>
-        <artifactId>postgresql-async</artifactId>
+        <artifactId>postgresql-async-parent</artifactId>
         <version>0.2.22-SNAPSHOT</version>
     </parent>
     <artifactId>mysql-async</artifactId>

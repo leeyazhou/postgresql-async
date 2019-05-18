@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ly.train</groupId>
-        <artifactId>postgresql-async</artifactId>
+        <artifactId>postgresql-async-parent</artifactId>
         <version>0.2.22-SNAPSHOT</version>
     </parent>
     <artifactId>db-async-common</artifactId>
@@ -34,21 +34,43 @@
             <version>3.21.0-GA</version>
         </dependency>
         <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.specs2</groupId>
             <artifactId>specs2-core_2.12</artifactId>
-            <version>3.8.9</version>
+            <version>4.3.6</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.scala-lang.modules</groupId>
+                    <artifactId>scala-parser-combinators_2.12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.scala-lang.modules</groupId>
+                    <artifactId>scala-xml_2.12</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.specs2</groupId>
             <artifactId>specs2-junit_2.12</artifactId>
-            <version>3.8.9</version>
+            <version>4.3.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.specs2</groupId>
             <artifactId>specs2-mock_2.12</artifactId>
-            <version>3.8.9</version>
+            <version>4.3.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -59,21 +81,5 @@
         </dependency>
 
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                    </execution>
-                </executions>
-                <configuration>
-                    <source>src/main/java</source>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
 </project>
